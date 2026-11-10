@@ -31,7 +31,7 @@ import * as THREE from 'three';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 const root=document.getElementById('viewer'), fallback=document.getElementById('fallback'),stageLabel=document.getElementById('stageLabel'),dot=document.getElementById('statusDot');
-const modelBase='https://raw.githubusercontent.com/kblood/CharacterCreator/master/output/';
+const modelBase='https://raw.githubusercontent.com/kblood/CharacterCreator/852e48f316b90a0937234886630e4fb4cdfd1f78/output/';
 let renderer,scene,camera,controls,fullBody,orbit=false,raf=0; let resources=[];
 function fail(message){fallback.innerHTML='<b>3D source unavailable here</b><span>'+message+'</span><p style="font-size:11px">The character reference, notes and quality gates remain accessible.</p>';stageLabel.textContent='Asset not loaded';dot.classList.add('err');document.getElementById('rigStatus').textContent='C1 / NOT VERIFIED';document.getElementById('rigHelp').textContent='External GLB load failed in this browser. No rig pass can be claimed.'}
 try{
