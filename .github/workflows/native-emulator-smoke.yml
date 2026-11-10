@@ -24,9 +24,9 @@ jobs:
       - name: Emulator boot, install, inspect, screenshot
         uses: reactivecircus/android-emulator-runner@v2
         with:
-          api-level: 35
+          api-level: 34
           arch: x86_64
-          target: google_apis
+          target: default
           profile: pixel_6
           disable-animations: true
           emulator-boot-timeout: 600
