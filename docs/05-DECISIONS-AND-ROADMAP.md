@@ -31,7 +31,7 @@
 | D-026 | V0.3 Skill Studio / Track A | Implemented, rendered and hosted on prior academy URL | Four concept steps, mistakes, notes, honest media status, quiz unlocking; original 3 lessons/navigation preserved |
 | D-027 | Native Compose learning foundation | Source implemented; real GitHub CI debug APK build PASSED | Home, skill tabs, quizzes, notes, timer demo, Journey and local save. No new disciplines; see android-native/README.md |
 | D-028 | CI validation and debug APK | PASSED; emulator/device pending | Build run #42833209925, artifact verified; docs/18 |
-| D-029 | Native visual QA evidence | In progress; first captured screenshot is splash only | Emulator AOSP API34 starts but UIAutomator failed; added delayed screenshots/logcat, see docs/19 |
+| D-029 | Native visual QA evidence | First actual onboarding screen CAPTURED; Home/Skill pending | API34 System UI ANR interrupted UIAutomator; lightweight capture-only run on API30, see docs/19 |
 
 ## Status by stage
 | Stage | Status | Exit evidence |
@@ -40,7 +40,7 @@
 | 1. Visual concepts & interactive UX | Skill Studio V0.3 implemented; Chromium checks pass; owner fidelity review pending | Owner evaluates live Study Path, Errors, Media Status, notes |
 | 2. Instructor media / motion QC | C0 visual direction accepted; C1 engineering viewer built but actual A01 model NOT ready | Approved editable mesh and validated deformation before trainer reference C2 and review C3–C4 |
 | 3. Functional Android prototype | Compose source and debug APK BUILT; JVM tests passed | Actual emulator/device installation, screenshots, QA and owner design acceptance |
-| 4. QA & emulator/device review | Unit tests passed; AOSP emulator boots and captures splash; real Compose UI screenshot and navigation NOT VERIFIED | Delayed-screen diagnostic run, actual UI captures, layout and interaction review |
+| 4. QA & emulator/device review | Unit tests passed; **native onboarding screen captured**; Android System UI ANR blocks navigation capture | ADB-only lighter emulator candidate screenshots, actual UI review, device interaction |
 | 5. Installable prototype | Debug APK produced (not installed/tested) | Real Android installation and test checklist |
 
 ## Scope discipline
@@ -97,7 +97,7 @@ No unsolicited expansion to full martial arts catalogues, AI trainers, subscript
 - Standalone HTML v0.3: prototype/academy_working_prototype.html (on main). Four conceptual steps per lesson; previously inaccurate SVG pose system removed.
 - QA: prototype/checks.cjs and .github/workflows/prototype-check.yml.
 - Local simulated-DOM Node test passed for major interactions and persistence; GitHub Actions run status not yet confirmed.
-- Web V0.3 browser screenshots were captured separately. The native debug APK exists and passed archive checks; emulator captures currently show only Android launch splash, not verified Compose screens.
+- Web V0.3 browser screenshots were captured separately. The native debug APK exists and passed archive checks. Delayed emulator capture now verifies **Compose onboarding rendered**; other native screens and device navigation remain unverified due Android System UI ANR.
 
 ## Release truthfulness
 Do not claim a tested APK, complete animation, or reviewed technique unless evidence exists. Maintain accurate statuses and versioned release notes.
