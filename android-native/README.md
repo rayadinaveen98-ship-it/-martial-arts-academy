@@ -1,7 +1,7 @@
 # Martial Arts Academy — native Android foundation
 
 **Date:** November 10, 2026  
-**Status:** Native Kotlin + Jetpack Compose source implemented; **APK build and emulator/device verification not yet confirmed**.  
+**Status:** Native Kotlin + Jetpack Compose source implemented; **GitHub Actions debug APK build and JVM unit tests passed on Nov 10, 2026**. Emulator/device verification is pending.  
 **Preserves:** The approved V0.3 three-lesson Boxing Foundations concept and premium obsidian/crimson visual direction.
 
 ## What's in the native source
@@ -20,7 +20,7 @@
 
 ## Build strategy
 
-The GitHub workflow at [native-android-check.yml](../.github/workflows/native-android-check.yml) is configured to install SDK 36, run JVM rules tests, compile a debug build, and upload the debug APK as a short-lived GitHub Actions artifact **only if the build passes**. Its actual execution/result has not been independently confirmed here.
+The GitHub workflow at [native-android-check.yml](../.github/workflows/native-android-check.yml) is configured to install SDK 36, run JVM rules tests, compile a debug build, and upload the debug APK as a short-lived GitHub Actions artifact **only if the build passes**. The workflow passed in [GitHub run #42833209925](https://github.com/rayadinaveen98-ship-it/-martial-arts-academy/actions/runs/42833209925). See [build validation](../docs/18-NATIVE-ANDROID-CI-PASS.md) for artifact ID and SHA-256.
 
 ### Build on a laptop with Android SDK, JDK 17 and Gradle 8.14
 From the `android-native` directory:
@@ -50,7 +50,7 @@ Pinned baseline:
 
 ## QA gates still open
 
-1. GitHub Actions debug build finishes successfully and its artifact is inspected.
+1. **Completed:** GitHub Actions debug build and unit tests passed; artifact extracted, APK archive integrity checked.
 2. Install on emulator / physical Android phone, capture genuine screenshots, review 360–430dp screens against approved design.
 3. Validate first-run personalization, navigation, concept gate, mistakes, notes persistence, quizzes, timer pause/resume/end and app restart.
 4. Verify accessibility contrast, font scaling, TalkBack and background lifecycle behavior.
