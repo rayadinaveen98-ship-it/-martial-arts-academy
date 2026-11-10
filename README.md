@@ -1,6 +1,6 @@
 # Martial Arts Academy
 
-**Status:** Pre-production — research and planning only  
+**Status:** Character C1 technical experiment; research and design are ongoing  
 **Platform target:** Android  
 **First prototype:** Boxing Foundations v0.1  
 **Last reviewed:** 2026-11-10
@@ -9,7 +9,11 @@
 
 ## Character A01 review workspace
 
-**Open the [A01 Character Lab](https://martial-arts-a01-character-lab.vercel.app/)** on your phone to inspect the neutral front/profile/rear/three-quarter appearance and record visual feedback. This is a **2D concept inspection page**, not a 3D rig, not a coach-approved boxing instructor, and does not send review notes to GitHub. The [web source](character-lab/index.html) and [C0 production feasibility](docs/14-A01-CHARACTER-GATE-AND-3D-FEASIBILITY.md) are versioned here. **Owner's character approval is still pending.**
+**Open the [A01 Character Lab](https://martial-arts-a01-character-lab.vercel.app/)** on your phone to inspect the neutral front/profile/rear/three-quarter appearance and record visual feedback. This is a **2D concept inspection page**, not a 3D rig, not a coach-approved boxing instructor, and does not send review notes to GitHub. The [web source](character-lab/index.html) and [C0 production feasibility](docs/14-A01-CHARACTER-GATE-AND-3D-FEASIBILITY.md) are versioned here. **Owner has accepted the A01 concept as our visual target; an actual A01 mesh/rig remains unapproved.**
+
+## C1 geometry test bench (November 10, 2026)
+
+**[Open the A01 C1 Geometry Lab](https://martial-arts-a01-c1.vercel.app/)** to compare our accepted concept art with a separate real rigged-base candidate. Four 3D camera views, orbit controls, computed joint/mesh counts when assets load, and local review notes are included. Third-party 3D files are pinned to a specific upstream commit. **The actual A01 model, its rig, deformations and technique motion are NOT built or approved.** The hosted page is READY but live Safari GLB loading is not independently confirmed. [Technical implementation](character-c1/README.md) · [C1 test/gate report](docs/15-C1-GEOMETRY-EXPERIMENT.md).
 
 ## Character-first reset (November 10, 2026)
 
@@ -61,4 +65,4 @@ A reproducible smoke-test script and GitHub Actions workflow are committed. Loca
 - [Character/motion validation production process](docs/13-CHARACTER-AND-MOTION-PRODUCTION-GATES.md)
 
 ## Important status distinction
-Documentation is the only initialized work here. **No app implementation, approved characters, verified instructional motion, emulator screenshots, or APK exist yet. Three static visual concepts have been prepared for owner review; not approved for implementation.**
+Documentation, an HTML academy demo, a rejected schematic-motion test, A01 art-review tools and a C1 technical 3D viewer exist. **No custom A01 mesh, reviewed stance video, native Android implementation, emulator screenshot or APK exists.**
