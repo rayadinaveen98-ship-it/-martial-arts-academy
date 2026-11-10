@@ -1,0 +1,19 @@
+name: Character C1 checks
+on:
+  push:
+    paths:
+      - "character-c1/**"
+      - ".github/workflows/character-c1-check.yml"
+  workflow_dispatch:
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node character-c1/check-page.cjs
+      - run: node character-c1/validate-glb.cjs --selftest
