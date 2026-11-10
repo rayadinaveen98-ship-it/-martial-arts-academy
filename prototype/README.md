@@ -5,6 +5,12 @@ Artifact: [Self-contained HTML](academy_working_prototype.html)
 
 **Current version: v0.2 (motion study).** This is a **self-contained web prototype for quick iPhone/desktop evaluation**, not an Android APK. All styling, JavaScript and decorative artwork are bundled inside the HTML, requiring no server or paid API.
 
+## Open online on iPhone
+
+**V0.2 browser preview:** https://martial-arts-academy-v02.vercel.app/
+
+This is a static, publicly accessible prototype on a separate Vercel Hobby project. No ZIP or GitHub login is required. Hosting deployment reports READY and project SSO/password protection is disabled. An independent end-to-end Safari check has not been performed; report any loading error or screenshot for diagnosis.
+
 ## Implemented behavior
 - Five-stage Stance & Guard *animated schematic* with Play/Pause, Previous/Next, step chooser, scrubbing and 0.5×/1×/1.5× speed. **Not reviewed instructional media.**
 - First-run preference onboarding: goal, stance (orthodox/southpaw/unsure), available space.
