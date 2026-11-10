@@ -55,3 +55,14 @@ Therefore GitHub's non-accelerated Linux emulator is unreliable for input and na
 **Decision:** Stop retrying identical software emulators. Preserve working APK and code. Next useful visual test requires a responsive, hardware-accelerated emulator or physical Android device. Do not alter boxing lessons, trainer poses or curriculum to resolve a host System UI ANR.
 
 **Open gate:** actual Home, Skill Studio, Errors, Media, Knowledge Check and Journey screenshots plus direct touch testing. Do not call capture-only workflow success an end-to-end app QA pass.
+
+## QA false-positive prevention (2026-11-10)
+
+The screenshot-only run #42845729720 is **green for collection only**, not screen navigation: SHA-256 hashes of images 02, 03 and 04 are identical and the underlying screen remains onboarding, covered by an Android System UI ANR dialog. The runtime diagnostics specifically report `Application Not Responding: com.android.systemui`, while the academy process was present.
+
+**Corrective actions committed:**
+- `tools/android/capture_native.py` now refuses a pass if runtime diagnostics show Android System UI ANR, if the three navigation candidate images are identical, or if there are too few distinct screen images. It continues saving screenshots/logs before raising an error.
+- Emulator CI `.github/workflows/native-emulator-smoke.yml` is now **manual** rather than automatically rerunning for every source/doc update. Software-only Linux runners repeatedly became unresponsive and consumed minutes without producing valid interaction evidence.
+- **Next required runtime:** a responsive emulator with hardware acceleration, or a real Android phone. This is an infrastructure/QA requirement, not a new product feature.
+
+The smoke script's strict status checks are source-implemented but have not yet been exercised in a fresh emulator run. Real Home / Skill Studio / quizzes / timer still require direct proof before approval.
