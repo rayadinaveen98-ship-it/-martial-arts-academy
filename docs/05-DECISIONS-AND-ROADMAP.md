@@ -31,7 +31,7 @@
 | D-026 | V0.3 Skill Studio / Track A | Implemented, rendered and hosted on prior academy URL | Four concept steps, mistakes, notes, honest media status, quiz unlocking; original 3 lessons/navigation preserved |
 | D-027 | Native Compose learning foundation | Source implemented; real GitHub CI debug APK build PASSED | Home, skill tabs, quizzes, notes, timer demo, Journey and local save. No new disciplines; see android-native/README.md |
 | D-028 | CI validation and debug APK | PASSED; emulator/device pending | Build run #42833209925, artifact verified; docs/18 |
-| D-029 | Native visual QA evidence | First actual onboarding screen CAPTURED; Home/Skill pending | API34 System UI ANR interrupted UIAutomator; lightweight capture-only run on API30, see docs/19 |
+| D-029 | Native visual QA evidence | Onboarding captured; Home/Skill Studio NOT verified | API34/API30 Linux emulator System UI ANRs; capture-only workflow success not a UI pass; see docs/19 |
 
 ## Status by stage
 | Stage | Status | Exit evidence |
@@ -40,7 +40,7 @@
 | 1. Visual concepts & interactive UX | Skill Studio V0.3 implemented; Chromium checks pass; owner fidelity review pending | Owner evaluates live Study Path, Errors, Media Status, notes |
 | 2. Instructor media / motion QC | C0 visual direction accepted; C1 engineering viewer built but actual A01 model NOT ready | Approved editable mesh and validated deformation before trainer reference C2 and review C3–C4 |
 | 3. Functional Android prototype | Compose source and debug APK BUILT; JVM tests passed | Actual emulator/device installation, screenshots, QA and owner design acceptance |
-| 4. QA & emulator/device review | Unit tests passed; **native onboarding screen captured**; Android System UI ANR blocks navigation capture | ADB-only lighter emulator candidate screenshots, actual UI review, device interaction |
+| 4. QA & emulator/device review | Real native onboarding rendered; Home/Skill Studio blocked by repeated Linux-emulator System UI ANRs | Responsive emulator or Android-device screenshots/navigation tests |
 | 5. Installable prototype | Debug APK produced (not installed/tested) | Real Android installation and test checklist |
 
 ## Scope discipline
@@ -103,5 +103,5 @@ No unsolicited expansion to full martial arts catalogues, AI trainers, subscript
 Do not claim a tested APK, complete animation, or reviewed technique unless evidence exists. Maintain accurate statuses and versioned release notes.
 
 ## Native UI visual acceptance checkpoint
-- [Emulator visual evidence gate](19-NATIVE-EMULATOR-VISUAL-QA.md) records CI failures, splash-only capture, and strict conditions to count real Android screenshots.
+- [Emulator visual evidence gate](19-NATIVE-EMULATOR-VISUAL-QA.md) records real Compose onboarding, repeated Android System UI ANRs and remaining device-level verification requirements.
 - No character-motion changes or scope expansion until the Android visual and A01 gates pass independently.
