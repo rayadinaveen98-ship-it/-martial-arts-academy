@@ -1,11 +1,5 @@
-name: Native Android emulator visual smoke
+name: Native Android emulator visual smoke (manual)
 on:
-  push:
-    paths:
-      - '.github/workflows/native-emulator-smoke.yml'
-      - 'android-native/**'
-      - 'tools/android/visual_smoke.py'
-      - 'tools/android/capture_native.py'
   workflow_dispatch:
 permissions:
   contents: read
@@ -22,7 +16,10 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.14'
-      - name: Emulator boot, install, inspect, screenshot
+      # This is intentionally manual: repeated software-only Linux emulator runs
+      # trigger com.android.systemui ANR. Use on an accelerated runner or after
+      # fixing emulator infrastructure; saved screenshots are NOT an automatic pass.
+      - name: Emulator and candidate screen capture
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 30
@@ -34,11 +31,11 @@ jobs:
           script: |
             gradle -p android-native :app:assembleDebug
             python3 tools/android/capture_native.py
-      - name: Upload real emulator screenshots
+      - name: Upload screenshots and diagnostics regardless of test result
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: maa-native-emulator-screenshots
+          name: maa-native-emulator-evidence
           path: android-native/qa/screenshots/*
           if-no-files-found: warn
           retention-days: 7
