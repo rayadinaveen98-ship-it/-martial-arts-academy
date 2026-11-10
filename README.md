@@ -5,6 +5,8 @@
 **First prototype:** Boxing Foundations v0.1  
 **Last reviewed:** 2026-11-10
 
+**Stage 0 update:** Detailed boxing curriculum, state-machine/test contract, trainer asset production gates, and unresolved coaching questions are documented. External coach sign-off remains outstanding.
+
 ## Product promise
 A premium, interactive martial arts education companion that makes beginner progress understandable and meaningful. Not a substitute for qualified in-person coaching or supervised contact training.
 
@@ -33,6 +35,10 @@ A premium, interactive martial arts education companion that makes beginner prog
 - [Movement and instructor asset quality standard](docs/03-MOTION-QUALITY-GATES.md)
 - [Visual direction and consistency](docs/04-VISUAL-DIRECTION.md)
 - [Decision log and roadmap](docs/05-DECISIONS-AND-ROADMAP.md)
+- [Detailed boxing curriculum](docs/06-BOXING-FOUNDATIONS-CURRICULUM.md)
+- [Interactive journey and acceptance tests](docs/07-INTERACTIVE-EXPERIENCE-AND-TEST-CASES.md)
+- [Trainer visual production brief](docs/08-TRAINER-VISUAL-PRODUCTION-BRIEF.md)
+- [Research disputes and open questions](docs/09-RESEARCH-DECISIONS-OPEN-QUESTIONS.md)
 
 ## Important status distinction
 Documentation is the only initialized work here. **No app implementation, approved characters, verified instructional motion, screenshots, or APK exist yet.**
