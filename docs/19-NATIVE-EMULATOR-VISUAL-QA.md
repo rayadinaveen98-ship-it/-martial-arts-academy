@@ -40,3 +40,18 @@ Next experiment: smaller AOSP API 30 emulation, **ADB touch input only** to capt
 The first real native onboarding screenshot shows no obvious clipping in the visible top and middle sections; type, options, active crimson selection and contrast are legible. This is *functional foundation quality*, not yet the rich cinematic presentation in the owner's accepted concept renders. Notably the screen has a simple dark background and standard option cards, without the higher-fidelity atmosphere/character emphasis of the original direction. The bottom action is below the first viewport and requires scrolling; this is acceptable only if discoverable and accessible after device testing. **Owner visual sign-off remains pending.**
 
 Do not "solve" this mismatch by placing the old generated mockup as one background image or by inventing an unreviewed trainer pose. Retain real Compose controls and the strict A01 reviewed-media gate.
+
+## Lightweight emulator final result — 2026-11-10
+
+The capture-only AOSP API 30 run [#42845729720](https://github.com/rayadinaveen98-ship-it/-martial-arts-academy/actions/runs/42845729720) finished with **workflow SUCCESS**: the script ran and uploaded screenshots and diagnostics. This is **NOT** a successful UI navigation or visual-parity test.
+
+Evidence:
+- 01-onboarding-candidate.png: native onboarding renders.
+- 02-after-scroll-candidate.png, 03-home-candidate.png, 04-skill-candidate.png: later captures are all overlaid by the Android **System UI isn't responding** modal, with the same underlying onboarding screen rather than the intended destinations.
+- runtime-diagnostics.txt: the current focus was Application Not Responding: com.android.systemui; Martial Arts Academy MainActivity remained the top underlying fullscreen app, and its process ID was present.
+
+Therefore GitHub's non-accelerated Linux emulator is unreliable for input and navigation testing. No confirmed Martial Arts Academy process crash, but no proof the app responds normally to touches here either.
+
+**Decision:** Stop retrying identical software emulators. Preserve working APK and code. Next useful visual test requires a responsive, hardware-accelerated emulator or physical Android device. Do not alter boxing lessons, trainer poses or curriculum to resolve a host System UI ANR.
+
+**Open gate:** actual Home, Skill Studio, Errors, Media, Knowledge Check and Journey screenshots plus direct touch testing. Do not call capture-only workflow success an end-to-end app QA pass.
