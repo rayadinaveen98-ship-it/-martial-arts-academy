@@ -1,0 +1,16 @@
+name: Character Lab static QA
+on:
+  push:
+    paths:
+      - 'character-lab/**'
+      - '.github/workflows/character-lab-check.yml'
+  workflow_dispatch:
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node character-lab/check-lab.cjs
