@@ -7,6 +7,10 @@
 
 **Stage 0 update:** Detailed boxing curriculum, state-machine/test contract, trainer asset production gates, and unresolved coaching questions are documented. External coach sign-off remains outstanding.
 
+## Character-first reset (November 10, 2026)
+
+The user approved the visual direction and navigation but reported substantial pose errors and poor character fidelity in the animated v0.2 SVG study. **This animation is not acceptable as an instructional asset.** No more movement expansion until the neutral Instructor A01 design sheet is approved, a single 3D rig is reviewed, and actual technique media are validated by a qualified boxing coach. See [character approval task](https://github.com/rayadinaveen98-ship-it/-martial-arts-academy/issues/2).
+
 ## Product promise
 A premium, interactive martial arts education companion that makes beginner progress understandable and meaningful. Not a substitute for qualified in-person coaching or supervised contact training.
 
@@ -49,6 +53,8 @@ A reproducible smoke-test script and GitHub Actions workflow are committed. Loca
 - [Research disputes and open questions](docs/09-RESEARCH-DECISIONS-OPEN-QUESTIONS.md)
 - [Visual concepts and correction checklist](docs/10-VISUAL-CONCEPT-REVIEW.md)
 - [Implemented Stance & Guard motion-study prototype and limitations](docs/11-MOTION-STUDY-V02.md)
+- [Character design system and C0–C4 gates](docs/12-CHARACTER-DESIGN-SYSTEM-V1.md)
+- [Character/motion validation production process](docs/13-CHARACTER-AND-MOTION-PRODUCTION-GATES.md)
 
 ## Important status distinction
 Documentation is the only initialized work here. **No app implementation, approved characters, verified instructional motion, emulator screenshots, or APK exist yet. Three static visual concepts have been prepared for owner review; not approved for implementation.**
