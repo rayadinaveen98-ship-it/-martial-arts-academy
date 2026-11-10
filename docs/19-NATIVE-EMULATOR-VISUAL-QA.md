@@ -34,3 +34,9 @@ A delayed-image run [#42843030408](https://github.com/rayadinaveen98-ship-it/-ma
 At approximately 50 seconds, another image displayed **"System UI isn't responding"** over the same onboarding. The accessibility-dump command stalled and the run failed; the dialog names Android System UI, not the Martial Arts Academy process. Do not claim app crash from this alone. No Home/Skill Studio screenshots have yet passed review.
 
 Next experiment: smaller AOSP API 30 emulation, **ADB touch input only** to capture onboarding-scroll, home candidate and skill candidate screens before the heavy UIAutomator service can interfere. Workflow success only means captures were saved—each destination must be manually inspected and accepted.
+
+## Design parity findings — onboarding (real emulator image)
+
+The first real native onboarding screenshot shows no obvious clipping in the visible top and middle sections; type, options, active crimson selection and contrast are legible. This is *functional foundation quality*, not yet the rich cinematic presentation in the owner's accepted concept renders. Notably the screen has a simple dark background and standard option cards, without the higher-fidelity atmosphere/character emphasis of the original direction. The bottom action is below the first viewport and requires scrolling; this is acceptable only if discoverable and accessible after device testing. **Owner visual sign-off remains pending.**
+
+Do not "solve" this mismatch by placing the old generated mockup as one background image or by inventing an unreviewed trainer pose. Retain real Compose controls and the strict A01 reviewed-media gate.
