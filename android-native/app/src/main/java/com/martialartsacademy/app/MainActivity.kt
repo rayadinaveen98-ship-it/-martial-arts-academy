@@ -103,6 +103,10 @@ private fun AcademyNativeApp() {
             }
         }
     }
+    // Pauses the timer on in-app navigation as well as backgrounding.
+    LaunchedEffect(screen) {
+        if (screen != Screen.TIMER && timerState in listOf("work", "rest")) paused = true
+    }
     BackHandler(progress.onboarded && screen != Screen.HOME) {
         screen = if (screen == Screen.QUIZ) Screen.SKILL else Screen.HOME
     }
