@@ -29,6 +29,7 @@
 | D-024 | Genuine A01 production model | Blocked / not started | No Blender and no sculpted/rigged A01 geometry in runtime; requires source mesh, rigging QA and art acceptance |
 | D-025 | C1 Blender laptop readiness kit | Documentation, read-only audit script and CI syntax workflow committed | Blender execution not attempted; no mesh/pose certification |
 | D-026 | V0.3 Skill Studio / Track A | Implemented, rendered and hosted on prior academy URL | Four concept steps, mistakes, notes, honest media status, quiz unlocking; original 3 lessons/navigation preserved |
+| D-027 | Native Compose learning foundation | Source implemented, Android build verification pending | Home, skill tabs, quizzes, notes, timer demo, Journey and local save. No new disciplines; see android-native/README.md |
 
 ## Status by stage
 | Stage | Status | Exit evidence |
@@ -36,7 +37,7 @@
 | 0. Source research & curriculum | Research drafts committed; expert validation pending | Boxing curriculum, source cross-check, coach approval before instructional media |
 | 1. Visual concepts & interactive UX | Skill Studio V0.3 implemented; Chromium checks pass; owner fidelity review pending | Owner evaluates live Study Path, Errors, Media Status, notes |
 | 2. Instructor media / motion QC | C0 visual direction accepted; C1 engineering viewer built but actual A01 model NOT ready | Approved editable mesh and validated deformation before trainer reference C2 and review C3–C4 |
-| 3. Functional Android prototype | Native Android not started; HTML v0.2 now has five-phase interactive stance preview | Owner reviews actual storyboard; then native implementation after approval |
+| 3. Functional Android prototype | Compose source implemented; build/installation NOT YET VERIFIED | GitHub Actions debug APK + actual emulator/device tests; no trainer poses |
 | 4. QA & emulator/device review | Not started | Reproducible test results and parity with designs |
 | 5. Installable prototype | Not started | Verified APK and documented test checklist |
 
@@ -66,6 +67,15 @@ No unsolicited expansion to full martial arts catalogues, AI trainers, subscript
 4. Prepare non-instructional premium screen concepts (home, lesson, practice) for owner review.
 5. Obtain owner approval of the visual design before Android UI implementation.
 
+## Native Android foundation checkpoint (November 10, 2026)
+
+- [Android source and QA handoff](../android-native/README.md) committed. The native UI uses the same 3 lessons and dark/crimson concept direction.
+- Kotlin curriculum, local notes/progress, native Compose Home/Skill/Quiz/Timer/Journey/Profile, and A01 neutral artwork bundled offline.
+- JUnit test source covers 3-lesson scope, four steps, sequential unlocking, notes, no false mastery, timer completion only.
+- GitHub Actions [native-android-check.yml](../.github/workflows/native-android-check.yml) configured to run tests + compile and retain a debug APK **if successful**. Actual run/build result not yet verified.
+- No local Android SDK / Gradle: cannot claim build, installation or emulator screenshots.
+- Inaccurate instructional animations remain removed; C1 model and qualified boxing review still blocked.
+
 ## Track A — Skill Studio V0.3 (2026-11-10)
 
 - Scope intentionally limited to our boxing-first Skill Studio, *not* new features or disciplines.
@@ -85,7 +95,7 @@ No unsolicited expansion to full martial arts catalogues, AI trainers, subscript
 - Standalone HTML v0.3: prototype/academy_working_prototype.html (on main). Four conceptual steps per lesson; previously inaccurate SVG pose system removed.
 - QA: prototype/checks.cjs and .github/workflows/prototype-check.yml.
 - Local simulated-DOM Node test passed for major interactions and persistence; GitHub Actions run status not yet confirmed.
-- Browser visual screenshot test in the working environment was blocked by managed-browser restrictions. No native Android/emulator screenshots or APK exist.
+- Browser visual screenshot test in the working environment was blocked by managed-browser restrictions. No verified native Android/emulator screenshots or APK exist.
 
 ## Release truthfulness
 Do not claim a tested APK, complete animation, or reviewed technique unless evidence exists. Maintain accurate statuses and versioned release notes.
