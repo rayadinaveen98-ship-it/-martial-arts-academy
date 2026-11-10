@@ -44,13 +44,19 @@ A premium, interactive martial arts education companion that makes beginner prog
 - Offline-first design; no server or AI system required.
 - No camera-based technique correction, sparring, submissions or contact drills.
 
+## Skill Studio V0.3 — approved-concept direction only
+
+The previous procedural **five-stage boxing pose animation was rejected for incorrect poses and has been removed** from the live teaching interface. V0.3 keeps the same academy design, navigation, 3-lesson boxing curriculum and local progress, but delivers 4-step conceptual studies, expandable error explanations, personal lesson notes and a truthful unverified-media status. The A01 neutral portrait is concept art, **not** technical instruction.
+
+[Open V0.3 in Safari](https://martial-arts-academy-v02.vercel.app/) · [Implementation and QA report](docs/17-SKILL-STUDIO-V03.md). Native Android implementation, approved physical demonstrations, and qualified-coach sign-off remain pending.
+
 ## Interactive prototype (web vertical slice)
 
 [**Open the self-contained v0.1 web prototype source**](prototype/academy_working_prototype.html) · [Prototype functionality, caveats and manual test guide](prototype/README.md)
 
-Implemented: onboarding, three concept lessons, two questions per lesson, progressive unlocking, responsive dark cinematic UI, saved local progress, a practice timer demo, plus a five-stage animated **concept-only Stance & Guard storyboard** (Play/Pause, phases, scrubber, speed). This **is not an Android APK**, and generated athlete artwork is explicitly decorative, not coach-approved technique instruction.
+Implemented: onboarding, three concept lessons, two questions per lesson, four interactive concept study stages per lesson, progressive unlocking, expandable common errors, local notes, responsive dark cinematic UI, saved progress, and the existing timer demo. **The rejected SVG pose study is no longer on the lesson screen.** This **is not an Android APK**, and generated athlete artwork is explicitly decorative, not coach-approved technique instruction.
 
-A reproducible smoke-test script and GitHub Actions workflow are committed. Local Node simulated-DOM regression and motion tests passed; full browser screenshot/emulator visual QA has **not** passed owing to restrictions in the testing environment.
+A reproducible smoke-test script and GitHub Actions workflow are committed. Local Node simulated-DOM regression and motion tests passed; Chromium directly rendered the HTML at multiple mobile widths with interaction checks; external URL navigation and true iPhone/Android device QA are still unverified.
 
 ## Working documentation
 - [Project charter](docs/00-PROJECT-CHARTER.md)
