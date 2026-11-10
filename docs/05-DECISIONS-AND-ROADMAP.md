@@ -22,6 +22,8 @@
 | D-017 | Character-first production reset | In progress | Freeze new poses, establish single character identity, geometry, rig and technical coaching review; see docs/12–13 |
 | D-018 | Semi-realistic 3D instructor, motion from verified coach reference | Proposed art/technical strategy | Stable single model and reviewed renders; user must accept character concept before implementation |
 | D-019 | Pre-rendered approved motion with app-controlled playback | Proposed implementation strategy | High consistent visual quality and offline predictable behavior; real-time 3D later if needed |
+| D-020 | A01 C0 interactive neutral review lab | Implemented and deployed; owner feedback pending | Four fixed 2D views from one sheet, zoom, materials, checklist; NOT a real 3D character |
+| D-021 | Evaluate Blender MPFB2 + Rigify | Research complete, feasibility build not begun | License-friendly base mesh/rig controls; needs real artist evaluation and coaching validation |
 
 ## Status by stage
 | Stage | Status | Exit evidence |
@@ -35,6 +37,11 @@
 
 ## Scope discipline
 No unsolicited expansion to full martial arts catalogues, AI trainers, subscriptions, social networking, or advanced contact training. New features require an explicit change record.
+
+## Character C0 live review
+- Live review: https://martial-arts-a01-character-lab.vercel.app/ (Vercel deployment READY; public access controls disabled; iPhone end-to-end not independently verified).
+- GitHub source: character-lab/index.html; static QA: character-lab/check-lab.cjs.
+- Owner visual approval pending; no real mesh or rig yet. See docs/14 for feasibility.
 
 ## Immediate character-first reset (2026-11-10)
 - User likes UI/navigation but judges poses inaccurate and character low-quality.
