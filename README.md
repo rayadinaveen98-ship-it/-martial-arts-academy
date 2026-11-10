@@ -32,9 +32,9 @@ A premium, interactive martial arts education companion that makes beginner prog
 
 [**Open the self-contained v0.1 web prototype source**](prototype/academy_working_prototype.html) · [Prototype functionality, caveats and manual test guide](prototype/README.md)
 
-Implemented: onboarding, three concept lessons, two questions per lesson, progressive unlocking, responsive dark cinematic UI, saved local progress, a demo practice timer with pause/resume/rest and honest completion accounting. This **is not an Android APK**, and generated athlete artwork is explicitly decorative, not coach-approved technique instruction.
+Implemented: onboarding, three concept lessons, two questions per lesson, progressive unlocking, responsive dark cinematic UI, saved local progress, a practice timer demo, plus a five-stage animated **concept-only Stance & Guard storyboard** (Play/Pause, phases, scrubber, speed). This **is not an Android APK**, and generated athlete artwork is explicitly decorative, not coach-approved technique instruction.
 
-A reproducible smoke-test script and GitHub Actions workflow are committed. Local Node simulated-DOM QA passed; full browser screenshot/emulator visual QA has **not** passed, owing to browser restrictions in the testing environment.
+A reproducible smoke-test script and GitHub Actions workflow are committed. Local Node simulated-DOM regression and motion tests passed; full browser screenshot/emulator visual QA has **not** passed owing to restrictions in the testing environment.
 
 ## Working documentation
 - [Project charter](docs/00-PROJECT-CHARTER.md)
@@ -48,6 +48,7 @@ A reproducible smoke-test script and GitHub Actions workflow are committed. Loca
 - [Trainer visual production brief](docs/08-TRAINER-VISUAL-PRODUCTION-BRIEF.md)
 - [Research disputes and open questions](docs/09-RESEARCH-DECISIONS-OPEN-QUESTIONS.md)
 - [Visual concepts and correction checklist](docs/10-VISUAL-CONCEPT-REVIEW.md)
+- [Implemented Stance & Guard motion-study prototype and limitations](docs/11-MOTION-STUDY-V02.md)
 
 ## Important status distinction
 Documentation is the only initialized work here. **No app implementation, approved characters, verified instructional motion, emulator screenshots, or APK exist yet. Three static visual concepts have been prepared for owner review; not approved for implementation.**
