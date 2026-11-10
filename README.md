@@ -7,6 +7,12 @@
 
 **Stage 0 update:** Detailed boxing curriculum, state-machine/test contract, trainer asset production gates, and unresolved coaching questions are documented. External coach sign-off remains outstanding.
 
+## Native Android foundation (November 10, 2026)
+
+**Kotlin/Jetpack Compose source is now committed** under [android-native](android-native/README.md), preserving our existing boxing-first learning path, four-step Skill Studio, quiz gating, notes, timer demo and Journey. The neutral A01 artwork is bundled locally and no inaccurate stance animation is used. Unit tests and a [debug-build GitHub Actions workflow](.github/workflows/native-android-check.yml) are configured.
+
+**Important:** Android SDK and Gradle are unavailable in this execution environment. An actual native build, emulator screenshot and downloadable APK have **not been verified**; see the [native QA handoff](android-native/README.md). The [existing V0.3 web app](https://martial-arts-academy-v02.vercel.app/) remains the usable review experience.
+
 ## Character A01 review workspace
 
 **Open the [A01 Character Lab](https://martial-arts-a01-character-lab.vercel.app/)** on your phone to inspect the neutral front/profile/rear/three-quarter appearance and record visual feedback. This is a **2D concept inspection page**, not a 3D rig, not a coach-approved boxing instructor, and does not send review notes to GitHub. The [web source](character-lab/index.html) and [C0 production feasibility](docs/14-A01-CHARACTER-GATE-AND-3D-FEASIBILITY.md) are versioned here. **Owner has accepted the A01 concept as our visual target; an actual A01 mesh/rig remains unapproved.**
@@ -77,4 +83,4 @@ A reproducible smoke-test script and GitHub Actions workflow are committed. Loca
 - [Laptop Blender handoff](docs/16-BLENDER-LAPTOP-HANDOFF.md)
 
 ## Important status distinction
-Documentation, an HTML academy demo, a rejected schematic-motion test, A01 art-review tools and a C1 technical 3D viewer exist. **No custom A01 mesh, reviewed stance video, native Android implementation, emulator screenshot or APK exists.**
+Documentation, an HTML academy demo, a rejected schematic-motion test, A01 art-review tools and a C1 technical 3D viewer exist. **No custom A01 mesh, reviewed stance video, verified native Android build, emulator screenshot or APK exists. Native Compose source is present but build/installation are pending.**
