@@ -29,7 +29,8 @@
 | D-024 | Genuine A01 production model | Blocked / not started | No Blender and no sculpted/rigged A01 geometry in runtime; requires source mesh, rigging QA and art acceptance |
 | D-025 | C1 Blender laptop readiness kit | Documentation, read-only audit script and CI syntax workflow committed | Blender execution not attempted; no mesh/pose certification |
 | D-026 | V0.3 Skill Studio / Track A | Implemented, rendered and hosted on prior academy URL | Four concept steps, mistakes, notes, honest media status, quiz unlocking; original 3 lessons/navigation preserved |
-| D-027 | Native Compose learning foundation | Source implemented, Android build verification pending | Home, skill tabs, quizzes, notes, timer demo, Journey and local save. No new disciplines; see android-native/README.md |
+| D-027 | Native Compose learning foundation | Source implemented; real GitHub CI debug APK build PASSED | Home, skill tabs, quizzes, notes, timer demo, Journey and local save. No new disciplines; see android-native/README.md |
+| D-028 | CI validation and debug APK | PASSED; emulator/device pending | Build run #42833209925, artifact verified; docs/18 |
 
 ## Status by stage
 | Stage | Status | Exit evidence |
@@ -37,9 +38,9 @@
 | 0. Source research & curriculum | Research drafts committed; expert validation pending | Boxing curriculum, source cross-check, coach approval before instructional media |
 | 1. Visual concepts & interactive UX | Skill Studio V0.3 implemented; Chromium checks pass; owner fidelity review pending | Owner evaluates live Study Path, Errors, Media Status, notes |
 | 2. Instructor media / motion QC | C0 visual direction accepted; C1 engineering viewer built but actual A01 model NOT ready | Approved editable mesh and validated deformation before trainer reference C2 and review C3–C4 |
-| 3. Functional Android prototype | Compose source implemented; build/installation NOT YET VERIFIED | GitHub Actions debug APK + actual emulator/device tests; no trainer poses |
-| 4. QA & emulator/device review | Not started | Reproducible test results and parity with designs |
-| 5. Installable prototype | Not started | Verified APK and documented test checklist |
+| 3. Functional Android prototype | Compose source and debug APK BUILT; JVM tests passed | Actual emulator/device installation, screenshots, QA and owner design acceptance |
+| 4. QA & emulator/device review | JVM unit tests passed; emulator smoke check pending (initial runner image download failure) | Actual screenshot, interaction and parity evidence |
+| 5. Installable prototype | Debug APK produced (not installed/tested) | Real Android installation and test checklist |
 
 ## Scope discipline
 No unsolicited expansion to full martial arts catalogues, AI trainers, subscriptions, social networking, or advanced contact training. New features require an explicit change record.
@@ -72,8 +73,8 @@ No unsolicited expansion to full martial arts catalogues, AI trainers, subscript
 - [Android source and QA handoff](../android-native/README.md) committed. The native UI uses the same 3 lessons and dark/crimson concept direction.
 - Kotlin curriculum, local notes/progress, native Compose Home/Skill/Quiz/Timer/Journey/Profile, and A01 neutral artwork bundled offline.
 - JUnit test source covers 3-lesson scope, four steps, sequential unlocking, notes, no false mastery, timer completion only.
-- GitHub Actions [native-android-check.yml](../.github/workflows/native-android-check.yml) configured to run tests + compile and retain a debug APK **if successful**. Actual run/build result not yet verified.
-- No local Android SDK / Gradle: cannot claim build, installation or emulator screenshots.
+- GitHub Actions [native-android-check.yml](../.github/workflows/native-android-check.yml) passed unit tests and debug compilation in [run #42833209925](https://github.com/rayadinaveen98-ship-it/-martial-arts-academy/actions/runs/42833209925). Artifact SHA and details: [docs/18](18-NATIVE-ANDROID-CI-PASS.md).
+- No local Android SDK / Gradle; remote CI build passed. Installation and emulator screenshots still unverified.
 - Inaccurate instructional animations remain removed; C1 model and qualified boxing review still blocked.
 
 ## Track A — Skill Studio V0.3 (2026-11-10)
