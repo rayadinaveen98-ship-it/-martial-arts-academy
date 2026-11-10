@@ -7,6 +7,10 @@
 
 **Stage 0 update:** Detailed boxing curriculum, state-machine/test contract, trainer asset production gates, and unresolved coaching questions are documented. External coach sign-off remains outstanding.
 
+## Character A01 review workspace
+
+**Open the [A01 Character Lab](https://martial-arts-a01-character-lab.vercel.app/)** on your phone to inspect the neutral front/profile/rear/three-quarter appearance and record visual feedback. This is a **2D concept inspection page**, not a 3D rig, not a coach-approved boxing instructor, and does not send review notes to GitHub. The [web source](character-lab/index.html) and [C0 production feasibility](docs/14-A01-CHARACTER-GATE-AND-3D-FEASIBILITY.md) are versioned here. **Owner's character approval is still pending.**
+
 ## Character-first reset (November 10, 2026)
 
 The user approved the visual direction and navigation but reported substantial pose errors and poor character fidelity in the animated v0.2 SVG study. **This animation is not acceptable as an instructional asset.** No more movement expansion until the neutral Instructor A01 design sheet is approved, a single 3D rig is reviewed, and actual technique media are validated by a qualified boxing coach. See [character approval task](https://github.com/rayadinaveen98-ship-it/-martial-arts-academy/issues/2).
