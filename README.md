@@ -39,6 +39,7 @@ A premium, interactive martial arts education companion that makes beginner prog
 - [Interactive journey and acceptance tests](docs/07-INTERACTIVE-EXPERIENCE-AND-TEST-CASES.md)
 - [Trainer visual production brief](docs/08-TRAINER-VISUAL-PRODUCTION-BRIEF.md)
 - [Research disputes and open questions](docs/09-RESEARCH-DECISIONS-OPEN-QUESTIONS.md)
+- [Visual concepts and correction checklist](docs/10-VISUAL-CONCEPT-REVIEW.md)
 
 ## Important status distinction
-Documentation is the only initialized work here. **No app implementation, approved characters, verified instructional motion, screenshots, or APK exist yet.**
+Documentation is the only initialized work here. **No app implementation, approved characters, verified instructional motion, emulator screenshots, or APK exist yet. Three static visual concepts have been prepared for owner review; not approved for implementation.**
