@@ -3,7 +3,7 @@
 Built: 2026-11-10
 Artifact: [Self-contained HTML](academy_working_prototype.html)
 
-**Current version: v0.2 (motion study).** This is a **self-contained web prototype for quick iPhone/desktop evaluation**, not an Android APK. All styling, JavaScript and decorative artwork are bundled inside the HTML, requiring no server or paid API.
+**Current version: v0.3 (Skill Studio — concept study, no instructional poses).** This is a **self-contained web prototype for quick iPhone/desktop evaluation**, not an Android APK. All styling, JavaScript and decorative artwork are bundled inside the HTML, requiring no server or paid API.
 
 ## Open online on iPhone
 
@@ -12,7 +12,10 @@ Artifact: [Self-contained HTML](academy_working_prototype.html)
 This is a static, publicly accessible prototype on a separate Vercel Hobby project. No ZIP or GitHub login is required. Hosting deployment reports READY and project SSO/password protection is disabled. An independent end-to-end Safari check has not been performed; report any loading error or screenshot for diagnosis.
 
 ## Implemented behavior
-- Five-stage Stance & Guard *animated schematic* with Play/Pause, Previous/Next, step chooser, scrubbing and 0.5×/1×/1.5× speed. **Not reviewed instructional media.**
+- Interactive 4-step written/visual concept study in all three lessons, with stage map, Next/Previous, revealable takeaways, and visited-stage tracking.
+- Rejected five-stage procedural SVG fighting pose **removed from the live lesson**.
+- Common-error explanation accordion and coach-review media status panel, with no fake playback.
+- Locally saved, HTML-escaped personal note per lesson.
 - First-run preference onboarding: goal, stance (orthodox/southpaw/unsure), available space.
 - Mobile training home and 3-step learning journey; resume next incomplete lesson.
 - Three conceptual beginner boxing lessons: stance/guard, advance/retreat footwork, lead-hand jab.
@@ -24,7 +27,7 @@ This is a static, publicly accessible prototype on a separate Vercel Hobby proje
 
 ## Boundaries and known limitations
 - **Not coach-validated technique instruction.** The stylized motion is a prototype only, not accurate/approved physical coaching.
-- **Not a photorealistic character**; final animated trainer remains unbuilt.
+- No instructor motion is shown; only the neutral A01 character portrait appears as **decorative concept art**. Final animated trainer remains unbuilt.
 - **Not coach-validated technique instruction.** The decorative boxer image is concept art. No unverified animation is presented as expert-approved technique.
 - The timer is a working UX demo, not a prescribed workout.
 - No real multi-angle media, pose correction, estimated calories, XP, sparring, or accounts.
@@ -32,9 +35,13 @@ This is a static, publicly accessible prototype on a separate Vercel Hobby proje
 - Not an Android APK / native Jetpack Compose project yet.
 - Chromium visual screenshot QA was blocked by managed-browser restrictions. Do not claim emulator/device visual fidelity has been verified.
 
+## Hosted iPhone review
+
+**Stable HTTPS preview:** https://martial-arts-academy-v02.vercel.app/ — the same domain as V0.2, preserving the existing browser storage key.
+
 ## Verification completed
 - Node JavaScript syntax validation and motion-specific simulated-DOM test passed.
-- Vector first/final poses rendered and inspected; full phone browser screenshot blocked.
+- The previous vector pose system was removed after owner feedback. Actual Chromium screen renders and interactions passed at 360, 390 and 430px. File/URL navigation remains blocked by testing restrictions, so Safari verification still requires owner.
 - Node JavaScript syntax validation.
 - Automated simulated-DOM interaction test: first-run onboarding and preference persistence; incorrect quiz answers and retries; concept-based lesson unlocking; timer duration/start/pause/resume/early-stop and no false completion; timer completion logging; progress surviving reload.
 - GitHub fetch confirmation after push (HTML file complete with embedded art).
