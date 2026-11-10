@@ -3,9 +3,10 @@
 Built: 2026-11-10
 Artifact: [Self-contained HTML](academy_working_prototype.html)
 
-This is a **self-contained web prototype for quick iPhone/desktop evaluation**, not an Android APK. All styling, JavaScript and decorative artwork are bundled inside the HTML, requiring no server or paid API.
+**Current version: v0.2 (motion study).** This is a **self-contained web prototype for quick iPhone/desktop evaluation**, not an Android APK. All styling, JavaScript and decorative artwork are bundled inside the HTML, requiring no server or paid API.
 
 ## Implemented behavior
+- Five-stage Stance & Guard *animated schematic* with Play/Pause, Previous/Next, step chooser, scrubbing and 0.5×/1×/1.5× speed. **Not reviewed instructional media.**
 - First-run preference onboarding: goal, stance (orthodox/southpaw/unsure), available space.
 - Mobile training home and 3-step learning journey; resume next incomplete lesson.
 - Three conceptual beginner boxing lessons: stance/guard, advance/retreat footwork, lead-hand jab.
@@ -16,6 +17,8 @@ This is a **self-contained web prototype for quick iPhone/desktop evaluation**, 
 - Optional audio transition cue, progress dashboard, profile editing and reset.
 
 ## Boundaries and known limitations
+- **Not coach-validated technique instruction.** The stylized motion is a prototype only, not accurate/approved physical coaching.
+- **Not a photorealistic character**; final animated trainer remains unbuilt.
 - **Not coach-validated technique instruction.** The decorative boxer image is concept art. No unverified animation is presented as expert-approved technique.
 - The timer is a working UX demo, not a prescribed workout.
 - No real multi-angle media, pose correction, estimated calories, XP, sparring, or accounts.
@@ -24,6 +27,8 @@ This is a **self-contained web prototype for quick iPhone/desktop evaluation**, 
 - Chromium visual screenshot QA was blocked by managed-browser restrictions. Do not claim emulator/device visual fidelity has been verified.
 
 ## Verification completed
+- Node JavaScript syntax validation and motion-specific simulated-DOM test passed.
+- Vector first/final poses rendered and inspected; full phone browser screenshot blocked.
 - Node JavaScript syntax validation.
 - Automated simulated-DOM interaction test: first-run onboarding and preference persistence; incorrect quiz answers and retries; concept-based lesson unlocking; timer duration/start/pause/resume/early-stop and no false completion; timer completion logging; progress surviving reload.
 - GitHub fetch confirmation after push (HTML file complete with embedded art).
