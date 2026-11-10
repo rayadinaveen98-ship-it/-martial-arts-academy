@@ -24,19 +24,28 @@
 | D-019 | Pre-rendered approved motion with app-controlled playback | Proposed implementation strategy | High consistent visual quality and offline predictable behavior; real-time 3D later if needed |
 | D-020 | A01 C0 interactive neutral review lab | Implemented and deployed; owner feedback pending | Four fixed 2D views from one sheet, zoom, materials, checklist; NOT a real 3D character |
 | D-021 | Evaluate Blender MPFB2 + Rigify | Research complete, feasibility build not begun | License-friendly base mesh/rig controls; needs real artist evaluation and coaching validation |
+| D-022 | A01 C0 visual concept | Accepted by owner for C1 experimentation | Approval applies to reference appearance, not mesh or techniques |
+| D-023 | External rigged-base inspector | Implemented and deployed; browser model loading unverified | GitHub-pinned CC0 baseline with orbit, garment requirement and actual bone counts; see docs/15 |
+| D-024 | Genuine A01 production model | Blocked / not started | No Blender and no sculpted/rigged A01 geometry in runtime; requires source mesh, rigging QA and art acceptance |
 
 ## Status by stage
 | Stage | Status | Exit evidence |
 |---|---|---|
 | 0. Source research & curriculum | Research drafts committed; expert validation pending | Boxing curriculum, source cross-check, coach approval before instructional media |
 | 1. Visual concepts & interactive UX | Three images liked; first working HTML visual slice available, parity review pending | Owner reviews actual interactive UI and approves/revises |
-| 2. Instructor media / motion QC | Current schematic rejected for quality; freeze technique animation | Approve character concept C0, rig C1, qualified reference C2, technical review C3–C4 |
+| 2. Instructor media / motion QC | C0 visual direction accepted; C1 engineering viewer built but actual A01 model NOT ready | Approved editable mesh and validated deformation before trainer reference C2 and review C3–C4 |
 | 3. Functional Android prototype | Native Android not started; HTML v0.2 now has five-phase interactive stance preview | Owner reviews actual storyboard; then native implementation after approval |
 | 4. QA & emulator/device review | Not started | Reproducible test results and parity with designs |
 | 5. Installable prototype | Not started | Verified APK and documented test checklist |
 
 ## Scope discipline
 No unsolicited expansion to full martial arts catalogues, AI trainers, subscriptions, social networking, or advanced contact training. New features require an explicit change record.
+
+## C1 experimental deliverable
+- [C1 Geometry Lab](https://martial-arts-a01-c1.vercel.app/) deployed with public sign-in disabled.
+- Separate external rigged model candidate, **not** the original A01 character. Camera view/orbit functionality coded and static/GLB-parser self-tests passed locally.
+- Actual iPhone GLB render, per-joint skin deformation, fidelity to A01 and coach-safe movements unverified.
+- Evidence and source provenance: docs/15-C1-GEOMETRY-EXPERIMENT.md.
 
 ## Character C0 live review
 - Live review: https://martial-arts-a01-character-lab.vercel.app/ (Vercel deployment READY; public access controls disabled; iPhone end-to-end not independently verified).
