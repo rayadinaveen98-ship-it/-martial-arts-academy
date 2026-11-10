@@ -11,7 +11,7 @@
 
 **Kotlin/Jetpack Compose source is now committed** under [android-native](android-native/README.md), preserving our existing boxing-first learning path, four-step Skill Studio, quiz gating, notes, timer demo and Journey. The neutral A01 artwork is bundled locally and no inaccurate stance animation is used. Unit tests and a [debug-build GitHub Actions workflow](.github/workflows/native-android-check.yml) are configured.
 
-**Important:** Android SDK and Gradle are unavailable in this execution environment. An actual native build, emulator screenshot and downloadable APK have **not been verified**; see the [native QA handoff](android-native/README.md). The [existing V0.3 web app](https://martial-arts-academy-v02.vercel.app/) remains the usable review experience.
+**Native build verification passed:** [GitHub Actions unit tests + debug build](https://github.com/rayadinaveen98-ship-it/-martial-arts-academy/actions/runs/42833209925) on November 10, 2026. A ~10.8 MB debug APK was produced, with verified ZIP integrity and SHA-256 recorded in [build report](docs/18-NATIVE-ANDROID-CI-PASS.md). **Real-device installation, emulator screenshots, and design acceptance remain pending**; see [native QA handoff](android-native/README.md). The [existing V0.3 web app](https://martial-arts-academy-v02.vercel.app/) remains the usable review experience.
 
 ## Character A01 review workspace
 
@@ -83,4 +83,4 @@ A reproducible smoke-test script and GitHub Actions workflow are committed. Loca
 - [Laptop Blender handoff](docs/16-BLENDER-LAPTOP-HANDOFF.md)
 
 ## Important status distinction
-Documentation, an HTML academy demo, a rejected schematic-motion test, A01 art-review tools and a C1 technical 3D viewer exist. **No custom A01 mesh, reviewed stance video, verified native Android build, emulator screenshot or APK exists. Native Compose source is present but build/installation are pending.**
+Documentation, an HTML academy demo, a rejected schematic-motion test, A01 art-review tools and a C1 technical 3D viewer exist. **No custom A01 mesh, reviewed stance video, installed/tested Android app or emulator screenshots exist yet. Native debug APK build and JVM tests passed, but device QA remains pending.**
