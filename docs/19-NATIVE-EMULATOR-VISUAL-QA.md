@@ -26,3 +26,11 @@
 
 ## No unsupported quality claim
 A successful compilation is not sufficient to mark Android visual QA as passed. A screenshot of the **splash** is not an app screenshot. A passing UI automation script alone is not substitute for human inspection of the actual rendered frames. The next owner approval gate is **real screenshots plus an installable build**.
+
+## Actual native onboarding capture — November 10, 2026
+
+A delayed-image run [#42843030408](https://github.com/rayadinaveen98-ship-it/-martial-arts-academy/actions/runs/42843030408) captured **real Jetpack Compose onboarding** at approximately 25 seconds after launch, 1080×2400 px. The image shows the intended black/navy background, crimson active selection, visible orientation choices, legible typography and scrollable layout. This validates ONE app screen's rendering, not other screens, training correctness or device responsiveness.
+
+At approximately 50 seconds, another image displayed **"System UI isn't responding"** over the same onboarding. The accessibility-dump command stalled and the run failed; the dialog names Android System UI, not the Martial Arts Academy process. Do not claim app crash from this alone. No Home/Skill Studio screenshots have yet passed review.
+
+Next experiment: smaller AOSP API 30 emulation, **ADB touch input only** to capture onboarding-scroll, home candidate and skill candidate screens before the heavy UIAutomator service can interfere. Workflow success only means captures were saved—each destination must be manually inspected and accepted.
