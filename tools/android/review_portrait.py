@@ -36,14 +36,19 @@ try:
  for width in [360,390,430]:
   adb('shell','wm','size',f'{width*2}x{width*4}');time.sleep(3)
   # The full portrait card fits after scrolling the lesson heading off-screen.
-  for _ in range(4):
+  for _ in range(8):
    root,_=ui();b=find(root,'Instructor A01 standing neutrally')
-   if b and b[1]>=100 and b[3]<width*4-100:break
-   adb('shell','input','swipe',str(width),str(width*3),str(width),str(width*2),'300');time.sleep(1)
+   print('PORTRAIT',width,'bounds',b,'density',adb('shell','wm','density').decode(),flush=True)
+   if b and b[3]-b[1]>=620 and b[1]>=100 and b[3]<width*4-100:break
+   if b and b[1]<100:
+    adb('shell','input','swipe',str(width),'450',str(width),'700','300')
+   else:
+    adb('shell','input','swipe',str(width),'900',str(width),'650','300')
+   time.sleep(1)
   root,_=ui();b=find(root,'Instructor A01 standing neutrally')
+  name=f'02-skill-{width}dp';hashes.append(capture(name));results.append({'width_dp':width,'portrait_bounds_px':b})
   assert b and b[3]-b[1]>=620,'Full neutral portrait not visible'
   assert find(root,'APPROVED NEUTRAL APPEARANCE'),'Portrait caption missing'
-  name=f'02-skill-{width}dp';hashes.append(capture(name));results.append({'width_dp':width,'portrait_bounds_px':b})
  assert len(set(hashes))==len(hashes),'Repeated screenshots do not establish navigation'
  (OUT/'result.json').write_text(json.dumps({'app':APP,'screenshots':results,'status':'Android layout checks passed; human image review still required','sha256':hashes},indent=2))
 finally:
