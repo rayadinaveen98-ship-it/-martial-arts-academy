@@ -18,20 +18,28 @@
 | D-013 | Three-screen cinematic visual exploration | User liked direction, fidelity acceptance pending | See docs/10 |
 | D-014 | Web-first interactive proof on iPhone | Implemented as standalone HTML (not APK) | Provides early review without faking an Android build; see prototype/README.md |
 | D-015 | Conceptual progress vs certified technique | Locked | Quizzes unlock conceptual lessons only; unreviewed movements still blocked |
-| D-016 | Stance animation studio v0.2 | Implemented as **unverified schematic** | Five stages with playback, scrubber and speed; no claim of accurate human motion; see docs/11 |
+| D-016 | Stance animation studio v0.2 | Historical UI/animation experiment; user rejected pose and character fidelity | Do not reuse as instructional motion; see docs/11 |
+| D-017 | Character-first production reset | In progress | Freeze new poses, establish single character identity, geometry, rig and technical coaching review; see docs/12–13 |
+| D-018 | Semi-realistic 3D instructor, motion from verified coach reference | Proposed art/technical strategy | Stable single model and reviewed renders; user must accept character concept before implementation |
+| D-019 | Pre-rendered approved motion with app-controlled playback | Proposed implementation strategy | High consistent visual quality and offline predictable behavior; real-time 3D later if needed |
 
 ## Status by stage
 | Stage | Status | Exit evidence |
 |---|---|---|
 | 0. Source research & curriculum | Research drafts committed; expert validation pending | Boxing curriculum, source cross-check, coach approval before instructional media |
 | 1. Visual concepts & interactive UX | Three images liked; first working HTML visual slice available, parity review pending | Owner reviews actual interactive UI and approves/revises |
-| 2. Instructor media / motion QC | Schematic storyboard built; authentic trainer motion STILL BLOCKED | Licensed media plus qualified boxing coach sign-off |
+| 2. Instructor media / motion QC | Current schematic rejected for quality; freeze technique animation | Approve character concept C0, rig C1, qualified reference C2, technical review C3–C4 |
 | 3. Functional Android prototype | Native Android not started; HTML v0.2 now has five-phase interactive stance preview | Owner reviews actual storyboard; then native implementation after approval |
 | 4. QA & emulator/device review | Not started | Reproducible test results and parity with designs |
 | 5. Installable prototype | Not started | Verified APK and documented test checklist |
 
 ## Scope discipline
 No unsolicited expansion to full martial arts catalogues, AI trainers, subscriptions, social networking, or advanced contact training. New features require an explicit change record.
+
+## Immediate character-first reset (2026-11-10)
+- User likes UI/navigation but judges poses inaccurate and character low-quality.
+- Halt further movement production; neutral C0 character sheet is next.
+- For gates/decision rationale see docs/12 and docs/13 and GitHub character-approval issue.
 
 ## Immediate next tasks
 1. Review the detailed curriculum in `docs/06-BOXING-FOUNDATIONS-CURRICULUM.md` against England Boxing 2026 and Boxing Canada 2024.
