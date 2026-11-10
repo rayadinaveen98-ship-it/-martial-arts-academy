@@ -18,7 +18,7 @@
 | D-013 | Three-screen cinematic visual exploration | User liked direction, fidelity acceptance pending | See docs/10 |
 | D-014 | Web-first interactive proof on iPhone | Implemented as standalone HTML (not APK) | Provides early review without faking an Android build; see prototype/README.md |
 | D-015 | Conceptual progress vs certified technique | Locked | Quizzes unlock conceptual lessons only; unreviewed movements still blocked |
-| D-016 | Stance animation studio v0.2 | Historical UI/animation experiment; user rejected pose and character fidelity | Do not reuse as instructional motion; see docs/11 |
+| D-016 | Stance animation studio v0.2 | Historical UI/animation experiment; rejected and **removed from lesson UI in V0.3** | Do not reuse as instructional motion; see docs/11 and docs/17 |
 | D-017 | Character-first production reset | In progress | Freeze new poses, establish single character identity, geometry, rig and technical coaching review; see docs/12–13 |
 | D-018 | Semi-realistic 3D instructor, motion from verified coach reference | Proposed art/technical strategy | Stable single model and reviewed renders; user must accept character concept before implementation |
 | D-019 | Pre-rendered approved motion with app-controlled playback | Proposed implementation strategy | High consistent visual quality and offline predictable behavior; real-time 3D later if needed |
@@ -28,12 +28,13 @@
 | D-023 | External rigged-base inspector | Implemented and deployed; browser model loading unverified | GitHub-pinned CC0 baseline with orbit, garment requirement and actual bone counts; see docs/15 |
 | D-024 | Genuine A01 production model | Blocked / not started | No Blender and no sculpted/rigged A01 geometry in runtime; requires source mesh, rigging QA and art acceptance |
 | D-025 | C1 Blender laptop readiness kit | Documentation, read-only audit script and CI syntax workflow committed | Blender execution not attempted; no mesh/pose certification |
+| D-026 | V0.3 Skill Studio / Track A | Implemented, rendered and hosted on prior academy URL | Four concept steps, mistakes, notes, honest media status, quiz unlocking; original 3 lessons/navigation preserved |
 
 ## Status by stage
 | Stage | Status | Exit evidence |
 |---|---|---|
 | 0. Source research & curriculum | Research drafts committed; expert validation pending | Boxing curriculum, source cross-check, coach approval before instructional media |
-| 1. Visual concepts & interactive UX | Three images liked; first working HTML visual slice available, parity review pending | Owner reviews actual interactive UI and approves/revises |
+| 1. Visual concepts & interactive UX | Skill Studio V0.3 implemented; Chromium checks pass; owner fidelity review pending | Owner evaluates live Study Path, Errors, Media Status, notes |
 | 2. Instructor media / motion QC | C0 visual direction accepted; C1 engineering viewer built but actual A01 model NOT ready | Approved editable mesh and validated deformation before trainer reference C2 and review C3–C4 |
 | 3. Functional Android prototype | Native Android not started; HTML v0.2 now has five-phase interactive stance preview | Owner reviews actual storyboard; then native implementation after approval |
 | 4. QA & emulator/device review | Not started | Reproducible test results and parity with designs |
@@ -65,6 +66,15 @@ No unsolicited expansion to full martial arts catalogues, AI trainers, subscript
 4. Prepare non-instructional premium screen concepts (home, lesson, practice) for owner review.
 5. Obtain owner approval of the visual design before Android UI implementation.
 
+## Track A — Skill Studio V0.3 (2026-11-10)
+
+- Scope intentionally limited to our boxing-first Skill Studio, *not* new features or disciplines.
+- 3 lesson IDs preserved; 4 conceptual learning stages per lesson plus an explanatory mistakes panel, persistent learning notes and understanding-gated quiz.
+- Removed the rejected procedural fighter animation from the lesson. A01 neutral portrait shown as concept-only; no unverified angles, posing or playback.
+- Existing web domain https://martial-arts-academy-v02.vercel.app/ updated in place; deployment READY and sign-in protection disabled.
+- [Implementation / QA details](17-SKILL-STUDIO-V03.md).
+- Actual 3D A01, qualified boxing coach review and native Android remain pending.
+
 ## Laptop handoff readiness (2026-11-10)
 - [Blender C1 handoff](16-BLENDER-LAPTOP-HANDOFF.md): command-line use and acceptance conditions.
 - [Read-only audit](../tools/blender/audit_a01.py): inventories meshes, armatures, basic skinning links and textures; its report is NOT a pass certificate.
@@ -72,7 +82,7 @@ No unsolicited expansion to full martial arts catalogues, AI trainers, subscript
 - Blender/MPFB and actual user-laptop file access are still unavailable in this chat. Do not label C1 complete.
 
 ## Implementation evidence
-- Standalone HTML v0.2: prototype/academy_working_prototype.html (on main). Five-stage storyboard is interactive but unverified.
+- Standalone HTML v0.3: prototype/academy_working_prototype.html (on main). Four conceptual steps per lesson; previously inaccurate SVG pose system removed.
 - QA: prototype/checks.cjs and .github/workflows/prototype-check.yml.
 - Local simulated-DOM Node test passed for major interactions and persistence; GitHub Actions run status not yet confirmed.
 - Browser visual screenshot test in the working environment was blocked by managed-browser restrictions. No native Android/emulator screenshots or APK exist.
