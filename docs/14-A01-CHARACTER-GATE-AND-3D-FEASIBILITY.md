@@ -4,6 +4,9 @@
 **Stage:** Character concept review (C0), not model creation
 **Reason:** Owner found major pose inaccuracies and low fidelity in the v0.2 procedural fighter.
 
+## C0 approval update — November 10, 2026
+The owner accepted the A01 visual concept direction and authorized continuation. This **does not** constitute approval of any completed geometry/rig. The distinct C1 technical model experiment is documented in [15-C1-GEOMETRY-EXPERIMENT](15-C1-GEOMETRY-EXPERIMENT.md).
+
 ## Direct decision
 **Freeze all instructional movement animations.** Retire the old SVG pose study as a teaching representation. Preserve its playback controls and learning state as UI research only. Prioritize a single character specification and true, consistent neutral turnaround; then test a real mesh and rig, and later motion based on a qualified coach.
 
@@ -55,8 +58,8 @@ C0 approval does **not** approve C1 rigging or C2+ movement.
 - **C4 Instructional deployment:** owner signs off on appearance and understanding; media metadata carries coach review and revision. Only C4 clips can be instructional.
 
 ## Blocking decisions
-- Owner has not explicitly locked A01 as final appearance (continuation ≠ blanket approval).
-- No 3D mesh, skin weights, rig or GLB exists.
+- The owner accepted A01 as the visual target; the final 3D shape and materials remain subject to separate review.
+- No custom **A01** mesh, skin weights, rig or GLB exists. An external open-source rigged baseline is available for comparison, not part of A01 yet.
 - No qualified boxing coach signed off on content.
 - No rights-cleared footage has been obtained.
 - No device/emulator full visual acceptance has occurred.
