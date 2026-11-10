@@ -12,11 +12,14 @@
 | D-007 | Candidate cinematic palette | Proposed | Pending owner visual approval |
 | D-008 | Camera pose correction | Out of v0.1 | Tracking does not prove proper technique |
 | D-009 | Kotlin + Jetpack Compose, offline-first | Proposed | Avoid unnecessary backend/cost |
+| D-010 | Boxing curriculum & lesson checks | Draft complete; coach review pending | See docs/06, no misleading skill-mastery claims |
+| D-011 | Coach-reviewed vs decorative trainer imagery | Locked quality gate | See docs/08; no unverified physical technique presented as validated |
+| D-012 | Jab wrist-angle inconsistency | Open | EB26 and BC24 use differing wording; seek coach sign-off before instruction |
 
 ## Status by stage
 | Stage | Status | Exit evidence |
 |---|---|---|
-| 0. Source research & curriculum | In progress | Source register, skill specifications, coach review plan |
+| 0. Source research & curriculum | Research drafts committed; expert validation pending | Boxing curriculum, source cross-check, coach approval before instructional media |
 | 1. Visual concepts & interactive UX | Not started | Screens approved by owner |
 | 2. Instructor media / motion QC | Blocked pending qualified reviewer and media | Licensed, reviewed assets |
 | 3. Functional Android prototype | Not started | End-to-end usable journey |
@@ -27,10 +30,11 @@
 No unsolicited expansion to full martial arts catalogues, AI trainers, subscriptions, social networking, or advanced contact training. New features require an explicit change record.
 
 ## Immediate next tasks
-1. Expand the evidence-backed boxing beginner skill specifications.
-2. Decide instructional asset strategy and secure a suitable qualified reviewer.
-3. Produce **three coordinated visual directions** only if requested, or one clear proposed direction with owner review.
-4. Obtain visual approval before starting Android UI implementation.
+1. Review the detailed curriculum in `docs/06-BOXING-FOUNDATIONS-CURRICULUM.md` against England Boxing 2026 and Boxing Canada 2024.
+2. Identify a qualified boxing reviewer to adjudicate jab/wrist wording, stance details, physical drill dosage and both stance orientations.
+3. Secure rights-cleared trainer reference media or use explicitly marked concept placeholders; no unapproved technique motion.
+4. Prepare non-instructional premium screen concepts (home, lesson, practice) for owner review.
+5. Obtain owner approval of the visual design before Android UI implementation.
 
 ## Release truthfulness
 Do not claim a tested APK, complete animation, or reviewed technique unless evidence exists. Maintain accurate statuses and versioned release notes.
