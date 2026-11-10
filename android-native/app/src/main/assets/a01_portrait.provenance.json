@@ -1,0 +1,13 @@
+{
+  "asset": "a01_portrait.b64",
+  "render_view": "neutral three-quarter",
+  "width": 600,
+  "height": 900,
+  "png_bytes": 471404,
+  "png_sha256": "1a064d8d648400cb0638eb2563bf1da5c85f251e9b855f3c10c6bc0e4926b9a6",
+  "blender_source_sha256": "802cd51a4a39c5819f8246a710f2fd838de357f2a41c9e18cde10d5eceb0601c",
+  "appearance": "owner-approved neutral v003; unchanged PNG bytes",
+  "animation": false,
+  "upstream_assets": "CC0-1.0, kblood/CharacterCreator at 852e48f316b90a0937234886630e4fb4cdfd1f78",
+  "upstream_license": "https://github.com/kblood/CharacterCreator/blob/852e48f316b90a0937234886630e4fb4cdfd1f78/LICENSE-NOTES.md"
+}

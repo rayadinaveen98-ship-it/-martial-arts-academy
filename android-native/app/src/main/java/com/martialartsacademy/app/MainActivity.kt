@@ -325,7 +325,7 @@ private fun Skill(modifier: Modifier, lesson: SkillLesson, progress: LearnerProg
         TextButton(onClick = onBack) { Text("‹ BACK TO HOME", color = Muted) }
         Heading("SKILL STUDIO / BOXING FOUNDATIONS", lesson.title.uppercase(), lesson.subtitle)
         Frame {
-            Text("INSTRUCTOR A01 · VISUAL CONCEPT ONLY", color = Blue, fontSize = 11.sp)
+            Text("INSTRUCTOR A01 · NEUTRAL CHARACTER", color = Blue, fontSize = 11.sp)
             Spacer(Modifier.height(8.dp))
             val ctx = LocalContext.current
             val portrait = remember(ctx) {
@@ -335,23 +335,17 @@ private fun Skill(modifier: Modifier, lesson: SkillLesson, progress: LearnerProg
                     BitmapFactory.decodeByteArray(decoded, 0, decoded.size)
                 } catch (_: Exception) { null }
             }
-            Box(Modifier.fillMaxWidth().height(176.dp)
+            Box(Modifier.fillMaxWidth().height(320.dp)
                 .clip(RoundedCornerShape(14.dp))
                 .background(Brush.linearGradient(listOf(Raised, Color(0xFF381929), Panel)))) {
                 if (portrait != null) {
-                    Image(bitmap = portrait.asImageBitmap(), contentDescription = "A01 neutral character concept portrait",
-                        modifier = Modifier.fillMaxSize(), contentScale = ContentScale.Crop)
-                }
-                Box(Modifier.fillMaxSize().background(
-                    Brush.verticalGradient(listOf(Color.Transparent, Color(0xDF070B13)))))
-                Column(Modifier.align(Alignment.BottomStart).padding(16.dp)) {
-                    Text("A01 / NEUTRAL APPEARANCE STUDY", color = Color(0xFFFFB9C3),
-                        fontWeight = FontWeight.Bold, fontSize = 10.sp, letterSpacing = 1.sp)
-                    Text("NO VERIFIED TRAINER MOTION", color = White, fontSize = 12.sp,
-                        fontWeight = FontWeight.Black)
+                    Image(bitmap = portrait.asImageBitmap(), contentDescription = "Instructor A01 standing neutrally, full body including hands and feet",
+                        modifier = Modifier.fillMaxSize(), contentScale = ContentScale.Fit)
                 }
             }
-            Text("The character and teaching media are still awaiting technical review.",
+            Text("APPROVED NEUTRAL APPEARANCE", Modifier.padding(top = 10.dp),
+                color = Color(0xFFFFB9C3), fontWeight = FontWeight.Bold, fontSize = 10.sp, letterSpacing = 1.sp)
+            Text("Instructional movement is not available yet.",
                 Modifier.padding(top = 9.dp), color = Muted, fontSize = 12.sp)
         }
         Row(horizontalArrangement = Arrangement.spacedBy(7.dp)) {
