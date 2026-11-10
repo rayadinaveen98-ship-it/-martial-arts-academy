@@ -18,6 +18,7 @@ function openApp() {
   vm.runInContext(script, context);
   return {root, context,
     click(dataset) {listeners.click({target:{closest:()=>({dataset})}})},
+    input(dataset,value){listeners.input({target:{dataset,value}})},
     go: (route,i) => context.window.__academyQA.navigate(route,i),
     state: () => context.window.__academyQA.state()};
 }
@@ -26,6 +27,21 @@ assert.match(app.root.innerHTML,/WELCOME TO THE ACADEMY/);
 app.click({pick:'goal',value:'Build coordination'});
 app.click({saveProfile:'yes'});
 app.go('lesson',0);
+assert.match(app.root.innerHTML,/Study path/);
+assert.match(app.root.innerHTML,/Qualified coach review pending/);
+assert.doesNotMatch(app.root.innerHTML,/motion-scene|5-PHASE VISUAL EXPLAINER/);
+app.go('quiz');
+assert.equal(app.state().route,'lesson','Knowledge check gated until four concepts viewed');
+for(const i of [1,2,3])app.click({studioStep:String(i)});
+assert.equal(app.state().data.study.stance.visited.length,4);
+app.click({studioReveal:'1'});
+assert.match(app.root.innerHTML,/key takeaway/i);
+app.click({tab:'mistakes'});
+app.click({studioError:'0'});
+assert.match(app.root.innerHTML,/Learning principle/);
+app.click({tab:'media'});
+assert.match(app.root.innerHTML,/Not released yet/);
+app.input({studioNote:'1'},'Ask a coach about the guard.');
 app.go('quiz');
 app.click({answer:'0'});
 assert.match(app.root.innerHTML,/Not quite yet/);
@@ -57,18 +73,9 @@ const restored = openApp();
 assert.ok(restored.state().data.done.stance,'Learning persisted');
 assert.equal(restored.state().data.profile.goal,'Build coordination','Preference persisted');
 app.go('lesson',0);
-assert.match(app.root.innerHTML,/5-PHASE VISUAL EXPLAINER/,'Stance lesson has a real step-by-step motion studio');
-assert.match(app.root.innerHTML,/Animated concept preview/,'Animation is clearly unverified');
-app.click({motionStep:'4'});
-assert.equal(app.state().motion.p,4,'Fifth storyboard pose selected');
-app.click({motion:'play'});
-assert.equal(app.state().motion.playing,true,'Play state active, restarting at first stage');
-app.click({motion:'play'});
-assert.equal(app.state().motion.playing,false,'Pause state works');
-app.click({motionSpeed:'0.5'});
-assert.equal(app.state().motion.speed,0.5,'Speed selection applied');
-app.context.window.__academyQA.motionSeek(2.75);
-assert.equal(app.state().motion.p,2.75,'Scrubber updates the interpolated pose');
-app.go('home');
-assert.equal(app.state().motion.playing,false,'Playback does not continue off-screen');
-console.log('PASS: onboarding, feedback, unlocking, timer, cancellation, completion and persistence.');
+assert.match(app.root.innerHTML,/four-step|CONCEPT STUDY/i);
+assert.ok(app.state().data.study.stance.visited.length===4,'Study history persisted');
+assert.equal(app.state().data.study.stance.note,'Ask a coach about the guard.','Notes persisted');
+assert.equal(restored.state().data.study.stance.note,'Ask a coach about the guard.','Study notes survive reload');
+assert.doesNotMatch(app.root.innerHTML,/data-motion-step|renderMotionSvg/);
+console.log('PASS: V0.3 concept study, media status, expandable errors, notes, quiz gating, progress migration, timer and persistence.');
