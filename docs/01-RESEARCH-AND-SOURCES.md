@@ -3,6 +3,8 @@
 **Status:** Initial authoritative-source pass completed, full evidence review and coach validation pending.  
 **Research date:** 2026-11-10
 
+**Current conclusion:** beginner boxing curriculum drafted with two governing-body coaching manuals, but coach sign-off remains a hard release gate. See [curriculum](06-BOXING-FOUNDATIONS-CURRICULUM.md).
+
 ## Primary coaching reference
 **England Boxing, Boxing Coaching Handbook, Part 1 (February 2026).**
 https://www.englandboxing.org/wp-content/uploads/2026/02/EB_Boxing-Coaching-Handbook-Part-1_09_02_26.pdf
@@ -15,6 +17,21 @@ Key implications for product structure (editorial summary):
 
 **England Boxing, prior coaching handbook (cross-check):**
 https://www.englandboxing.org/wp-content/uploads/2022/03/EB_Boxing-Coaching-Handbook-Part-1_v8-002.pdf
+
+## Independent beginner coaching cross-check
+
+**Boxing Canada — Instruction-Beginners Reference Material (copyright 2024, hosted 2025):**  
+https://boxingcanada.org/wp-content/uploads/2025/01/Instruction-Beginners-Reference-Manual-EN.pdf
+
+Reviewed source sections and printed pages:
+- Stance and guard: pp. 41–44 (base, balance, hands and head).
+- Elementary footwork: pp. 45–48 (advance/retreat, feet never cross/come together).
+- Straight punching: pp. 49–51.
+- Jab and common errors: pp. 52–53.
+
+**Cross-check result:** Both national coaching documents support a foundation-first sequence: stance/guard -> movement -> straight lead-hand punch. They are not identical in every technical detail. The specific wrist-angle wording at the jab requires expert adjudication before visuals or impact instruction; see [research discrepancies](09-RESEARCH-DECISIONS-OPEN-QUESTIONS.md).
+
+The Boxing Canada PDF was visually inspected in this research pass for stance, footwork and jab pages. England Boxing's document was text-reviewed; automated image preview for the larger PDF failed, so original visual artwork should not be inferred from extracted descriptions alone.
 
 ## Physical activity and beginner load
 **World Health Organization — Physical activity**
