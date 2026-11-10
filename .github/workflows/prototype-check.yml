@@ -1,0 +1,17 @@
+name: Prototype smoke check
+on:
+  push:
+    paths:
+      - "prototype/**"
+      - ".github/workflows/prototype-check.yml"
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Check prototype interactions
+        run: node prototype/checks.cjs
