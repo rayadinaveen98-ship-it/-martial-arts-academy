@@ -18,14 +18,15 @@
 | D-013 | Three-screen cinematic visual exploration | User liked direction, fidelity acceptance pending | See docs/10 |
 | D-014 | Web-first interactive proof on iPhone | Implemented as standalone HTML (not APK) | Provides early review without faking an Android build; see prototype/README.md |
 | D-015 | Conceptual progress vs certified technique | Locked | Quizzes unlock conceptual lessons only; unreviewed movements still blocked |
+| D-016 | Stance animation studio v0.2 | Implemented as **unverified schematic** | Five stages with playback, scrubber and speed; no claim of accurate human motion; see docs/11 |
 
 ## Status by stage
 | Stage | Status | Exit evidence |
 |---|---|---|
 | 0. Source research & curriculum | Research drafts committed; expert validation pending | Boxing curriculum, source cross-check, coach approval before instructional media |
 | 1. Visual concepts & interactive UX | Three images liked; first working HTML visual slice available, parity review pending | Owner reviews actual interactive UI and approves/revises |
-| 2. Instructor media / motion QC | Blocked pending qualified reviewer and media | Licensed, reviewed assets |
-| 3. Functional Android prototype | Native Android not started; responsive HTML vertical slice works | Owner reviews HTML; then implement and test Kotlin/Compose version |
+| 2. Instructor media / motion QC | Schematic storyboard built; authentic trainer motion STILL BLOCKED | Licensed media plus qualified boxing coach sign-off |
+| 3. Functional Android prototype | Native Android not started; HTML v0.2 now has five-phase interactive stance preview | Owner reviews actual storyboard; then native implementation after approval |
 | 4. QA & emulator/device review | Not started | Reproducible test results and parity with designs |
 | 5. Installable prototype | Not started | Verified APK and documented test checklist |
 
@@ -40,7 +41,7 @@ No unsolicited expansion to full martial arts catalogues, AI trainers, subscript
 5. Obtain owner approval of the visual design before Android UI implementation.
 
 ## Implementation evidence
-- Standalone HTML: prototype/academy_working_prototype.html (on main).
+- Standalone HTML v0.2: prototype/academy_working_prototype.html (on main). Five-stage storyboard is interactive but unverified.
 - QA: prototype/checks.cjs and .github/workflows/prototype-check.yml.
 - Local simulated-DOM Node test passed for major interactions and persistence; GitHub Actions run status not yet confirmed.
 - Browser visual screenshot test in the working environment was blocked by managed-browser restrictions. No native Android/emulator screenshots or APK exist.
