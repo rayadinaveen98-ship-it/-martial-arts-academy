@@ -1,0 +1,8 @@
+'use strict';const fs=require('node:fs'),assert=require('node:assert/strict'),vm=require('node:vm');const html=fs.readFileSync(__dirname+'/index.html','utf8');
+for(const id of ['viewer','fallback','jointCount','meshCount','heightCount','rigStatus','rigHelp','angles','rotate','downloadSpec','notes','clearNotes'])assert.ok(html.includes('id="'+id+'"'),'missing '+id);
+for(const a of ['front','quarter','side','back'])assert.ok(html.includes('data-angle="'+a+'"'),'missing view '+a);
+const x=[...html.matchAll(/<script[^>]*>([\\s\\S]*?)<\\/script>/g)].map(m=>m[1]);const standalone=x.find(y=>y.includes('maa-a01-c1-notes'));
+assert.ok(standalone);new vm.Script(standalone);
+assert.ok(html.includes('data:image/jpeg;base64,'),'reference image is inlined');
+assert.ok(html.includes('base_body.glb')&&html.includes('clothing_tshirt.glb')&&html.includes('clothing_shorts.glb')&&html.includes('clothing_shoes.glb'),'3D assets and clothing defined');
+assert.ok(html.includes('C1 / NOT PASSED')&&html.includes('No punches'),'not falsely certified');console.log('PASS: page structure, controls, source and truthful labels');
