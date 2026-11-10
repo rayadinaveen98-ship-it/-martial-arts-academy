@@ -15,12 +15,13 @@
 | D-010 | Boxing curriculum & lesson checks | Draft complete; coach review pending | See docs/06, no misleading skill-mastery claims |
 | D-011 | Coach-reviewed vs decorative trainer imagery | Locked quality gate | See docs/08; no unverified physical technique presented as validated |
 | D-012 | Jab wrist-angle inconsistency | Open | EB26 and BC24 use differing wording; seek coach sign-off before instruction |
+| D-013 | Three-screen cinematic visual exploration | Concepts prepared; NOT approved | See docs/10; correct invented stats, unsupported controls and overly dense layouts before implementing |
 
 ## Status by stage
 | Stage | Status | Exit evidence |
 |---|---|---|
 | 0. Source research & curriculum | Research drafts committed; expert validation pending | Boxing curriculum, source cross-check, coach approval before instructional media |
-| 1. Visual concepts & interactive UX | Not started | Screens approved by owner |
+| 1. Visual concepts & interactive UX | Three concept images generated; OWNER REVIEW PENDING | Revised consistent layouts and explicit owner approval |
 | 2. Instructor media / motion QC | Blocked pending qualified reviewer and media | Licensed, reviewed assets |
 | 3. Functional Android prototype | Not started | End-to-end usable journey |
 | 4. QA & emulator/device review | Not started | Reproducible test results and parity with designs |
