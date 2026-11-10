@@ -27,6 +27,7 @@
 | D-022 | A01 C0 visual concept | Accepted by owner for C1 experimentation | Approval applies to reference appearance, not mesh or techniques |
 | D-023 | External rigged-base inspector | Implemented and deployed; browser model loading unverified | GitHub-pinned CC0 baseline with orbit, garment requirement and actual bone counts; see docs/15 |
 | D-024 | Genuine A01 production model | Blocked / not started | No Blender and no sculpted/rigged A01 geometry in runtime; requires source mesh, rigging QA and art acceptance |
+| D-025 | C1 Blender laptop readiness kit | Documentation, read-only audit script and CI syntax workflow committed | Blender execution not attempted; no mesh/pose certification |
 
 ## Status by stage
 | Stage | Status | Exit evidence |
@@ -63,6 +64,12 @@ No unsolicited expansion to full martial arts catalogues, AI trainers, subscript
 3. Secure rights-cleared trainer reference media or use explicitly marked concept placeholders; no unapproved technique motion.
 4. Prepare non-instructional premium screen concepts (home, lesson, practice) for owner review.
 5. Obtain owner approval of the visual design before Android UI implementation.
+
+## Laptop handoff readiness (2026-11-10)
+- [Blender C1 handoff](16-BLENDER-LAPTOP-HANDOFF.md): command-line use and acceptance conditions.
+- [Read-only audit](../tools/blender/audit_a01.py): inventories meshes, armatures, basic skinning links and textures; its report is NOT a pass certificate.
+- CI workflow [.github/workflows/blender-script-check.yml](../.github/workflows/blender-script-check.yml) provides a syntax check when the repository runs it; GitHub Actions result not confirmed here.
+- Blender/MPFB and actual user-laptop file access are still unavailable in this chat. Do not label C1 complete.
 
 ## Implementation evidence
 - Standalone HTML v0.2: prototype/academy_working_prototype.html (on main). Five-stage storyboard is interactive but unverified.
