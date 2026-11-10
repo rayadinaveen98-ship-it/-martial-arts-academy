@@ -1,10 +1,13 @@
 package com.martialartsacademy.app
 
 import android.os.Bundle
+import android.graphics.BitmapFactory
+import android.util.Base64
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -17,6 +20,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -321,12 +327,28 @@ private fun Skill(modifier: Modifier, lesson: SkillLesson, progress: LearnerProg
         Frame {
             Text("INSTRUCTOR A01 · VISUAL CONCEPT ONLY", color = Blue, fontSize = 11.sp)
             Spacer(Modifier.height(8.dp))
-            Box(Modifier.fillMaxWidth().height(140.dp).background(
-                Brush.linearGradient(listOf(Raised, Color(0xFF381929), Panel)),
-                RoundedCornerShape(14.dp)), contentAlignment = Alignment.Center) {
-                Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    Text("A01", color = Crimson, fontSize = 48.sp, fontWeight = FontWeight.Black)
-                    Text("NO VERIFIED TRAINER MOTION", color = White, fontSize = 11.sp)
+            val ctx = LocalContext.current
+            val portrait = remember(ctx) {
+                try {
+                    val encoded = ctx.assets.open("a01_portrait.b64").bufferedReader().use { it.readText() }
+                    val decoded = Base64.decode(encoded, Base64.DEFAULT)
+                    BitmapFactory.decodeByteArray(decoded, 0, decoded.size)
+                } catch (_: Exception) { null }
+            }
+            Box(Modifier.fillMaxWidth().height(176.dp)
+                .clip(RoundedCornerShape(14.dp))
+                .background(Brush.linearGradient(listOf(Raised, Color(0xFF381929), Panel)))) {
+                if (portrait != null) {
+                    Image(bitmap = portrait.asImageBitmap(), contentDescription = "A01 neutral character concept portrait",
+                        modifier = Modifier.fillMaxSize(), contentScale = ContentScale.Crop)
+                }
+                Box(Modifier.fillMaxSize().background(
+                    Brush.verticalGradient(listOf(Color.Transparent, Color(0xDF070B13)))))
+                Column(Modifier.align(Alignment.BottomStart).padding(16.dp)) {
+                    Text("A01 / NEUTRAL APPEARANCE STUDY", color = Color(0xFFFFB9C3),
+                        fontWeight = FontWeight.Bold, fontSize = 10.sp, letterSpacing = 1.sp)
+                    Text("NO VERIFIED TRAINER MOTION", color = White, fontSize = 12.sp,
+                        fontWeight = FontWeight.Black)
                 }
             }
             Text("The character and teaching media are still awaiting technical review.",
