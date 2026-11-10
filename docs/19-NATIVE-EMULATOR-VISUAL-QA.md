@@ -1,5 +1,13 @@
 # 19 — Native Android visual QA gate
 
+## Latest checkpoint — November 11, 2026
+
+[Run 42882661519](https://github.com/rayadinaveen98-ship-it/-martial-arts-academy/actions/runs/42882661519) passed build/unit tests and hardware-accelerated Android API 30 navigation to Home/Skill Studio, with actual portrait screenshots at 360/390/430 dp. Those images were visually inspected; full body, hands, shoes and caption are visible. The exact neutral PNG is included in the tested APK, merged through [PR #3](https://github.com/rayadinaveen98-ship-it/-martial-arts-academy/pull/3).
+
+The owner subsequently reports testing the APK and confirms the character appears, but dislikes the current pose/standing presentation. This is a presentation revision request, not approval of all app screens, physical technique or the rig. Full notes/quiz/timer/Journey lifecycle and accessibility/device QA remain open. See the [current roadmap](20-MASTER-ROADMAP.md).
+
+The failures and pending statuses below describe the earlier November 10 runs and remain historical evidence; they do not negate the later successful portrait check.
+
 **Date:** November 10, 2026  
 **Scope lock:** Only native UI verification and fixes required to match the accepted Boxing Foundations experience. No new disciplines, physical pose generators, AI technique scoring, added commercial features or 3D movement production.
 

@@ -1,6 +1,6 @@
 # 13 — Character and motion release-control plan
 
-**Status:** Process defined. No artwork or motions approved.
+**Current checkpoint (November 11, 2026):** Character identity was accepted; an editable local v003 rig and static app integration exist. The owner now rejects the standing presentation. C1 technical acceptance and all instructional-motion approvals remain open. See the [master roadmap](20-MASTER-ROADMAP.md); the gates below remain binding.
 **Owner feedback:** V0.2 motion study contains many incorrect poses; low-quality procedural character cannot be teaching standard.
 
 ## Immediate production freeze
@@ -46,7 +46,7 @@
 The manuals may be referenced for research but not reprinted as copyrighted app assets.
 
 ## Concrete next deliverable, and what it is not
-**Next:** 1 neutral character sheet (same person across full-body front, side, back, 3/4) and materials/lighting test, then owner review.
+**Current next deliverable, after roadmap acceptance:** a bounded natural static-standing presentation review using the existing character, inside Android. Preserve identity/outfit. Historical neutral turnaround and technical rig work already exist; do not repeat them as if production has not started.
 **Not next:** new skills, skeletal script polishing, vague AI-generated motion, Android APK, unsourced certificate of correct stance.
 
 ## Acceptance test plan for neutral character

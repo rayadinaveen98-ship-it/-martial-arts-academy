@@ -1,5 +1,11 @@
 # 05 — Decision log and roadmap
 
+## Current checkpoint — November 11, 2026
+
+The [master roadmap](20-MASTER-ROADMAP.md) is the current forward plan. A working Android debug app, local editable Blender v003 character/rig, static portrait integration and 360/390/430 dp emulator evidence now exist. The owner reports testing the APK and seeing the character, but rejects the current standing pose/presentation. Preserve the identity; review a natural static display pose before movement production. Full app QA, C1 rigger acceptance and coach-reviewed media remain open.
+
+The older status tables and checkpoints below are retained as historical working notes. Where they conflict, this dated checkpoint and the master roadmap take status precedence. Scope and media-quality requirements remain binding.
+
 ## Decisions and constraints
 | ID | Item | State | Rationale |
 |---|---|---|---|
