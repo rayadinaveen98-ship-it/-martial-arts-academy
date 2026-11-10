@@ -5,6 +5,7 @@ A human reviewer must inspect each image before marking visual QA as passed.
 """
 import os
 import re
+import hashlib
 import subprocess
 import time
 from pathlib import Path
@@ -29,6 +30,7 @@ def capture(name):
     path = OUT / name
     path.write_bytes(png)
     print("CAPTURED", name, len(png), "bytes", flush=True)
+    return hashlib.sha256(png).hexdigest()
 
 
 def tap(x, y):
@@ -81,21 +83,28 @@ def main():
     w, h = dimensions()
     print("SCREEN", w, h, flush=True)
     time.sleep(20)
-    capture("01-onboarding-candidate.png")
+    img1 = capture("01-onboarding-candidate.png")
 
     # Navigate via ADB-only touch input before software-emulator System UI ANRs.
     # Every capture is explicitly a CANDIDATE; no assertion of visual correctness.
     swipe(w*.5, h*.80, w*.5, h*.29)
     swipe(w*.5, h*.80, w*.5, h*.29)
-    capture("02-after-scroll-candidate.png")
+    img2 = capture("02-after-scroll-candidate.png")
     tap(w*.5, h*.87)
     time.sleep(9)
-    capture("03-home-candidate.png")
+    img3 = capture("03-home-candidate.png")
     tap(w*.5, h*.44)
     time.sleep(9)
-    capture("04-skill-candidate.png")
+    img4 = capture("04-skill-candidate.png")
     record_diagnostics()
-    print("CAPTURE COMPLETE. UI destinations remain unverified pending manual image inspection.")
+    diagnostics = (OUT / "runtime-diagnostics.txt").read_text(encoding="utf8", errors="replace")
+    if "Application Not Responding: com.android.systemui" in diagnostics:
+        raise RuntimeError("Android System UI ANR detected. Screenshots saved, UI QA FAILED.")
+    if img2 == img3 == img4:
+        raise RuntimeError("Navigation candidates are identical: Home/Skill not verified. UI QA FAILED.")
+    if len({img1, img2, img3, img4}) < 3:
+        raise RuntimeError("Too few distinct screens for navigation evidence. UI QA FAILED.")
+    print("CANDIDATE SCREENS DIFFER. Human screen identification and fidelity review are still required.")
 
 
 if __name__ == "__main__":
