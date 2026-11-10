@@ -5,6 +5,7 @@ on:
       - '.github/workflows/native-emulator-smoke.yml'
       - 'android-native/**'
       - 'tools/android/visual_smoke.py'
+      - 'tools/android/capture_native.py'
   workflow_dispatch:
 permissions:
   contents: read
@@ -24,20 +25,20 @@ jobs:
       - name: Emulator boot, install, inspect, screenshot
         uses: reactivecircus/android-emulator-runner@v2
         with:
-          api-level: 34
+          api-level: 30
           arch: x86_64
           target: default
-          profile: pixel_6
+          profile: pixel_3a
           disable-animations: true
           emulator-boot-timeout: 600
           script: |
             gradle -p android-native :app:assembleDebug
-            python3 tools/android/visual_smoke.py
+            python3 tools/android/capture_native.py
       - name: Upload real emulator screenshots
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: maa-native-emulator-screenshots
-          path: android-native/qa/screenshots/*.png
+          path: android-native/qa/screenshots/*
           if-no-files-found: warn
           retention-days: 7
