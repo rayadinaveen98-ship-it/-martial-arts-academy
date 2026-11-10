@@ -15,6 +15,10 @@
 
 **[Open the A01 C1 Geometry Lab](https://martial-arts-a01-c1.vercel.app/)** to compare our accepted concept art with a separate real rigged-base candidate. Four 3D camera views, orbit controls, computed joint/mesh counts when assets load, and local review notes are included. Third-party 3D files are pinned to a specific upstream commit. **The actual A01 model, its rig, deformations and technique motion are NOT built or approved.** The hosted page is READY but live Safari GLB loading is not independently confirmed. [Technical implementation](character-c1/README.md) · [C1 test/gate report](docs/15-C1-GEOMETRY-EXPERIMENT.md).
 
+## Laptop-ready Blender handoff
+
+While the owner's laptop is unavailable, we've prepared a **[Blender C1 setup and handoff guide](docs/16-BLENDER-LAPTOP-HANDOFF.md)** and a [read-only Blender scene audit script](tools/blender/audit_a01.py). The audit is designed to list meshes, armatures, weights and source textures without pretending to check anatomical accuracy. Source, instructions and a Python-syntax GitHub Actions workflow are committed. **The script has not yet been executed in a real Blender environment.**
+
 ## Character-first reset (November 10, 2026)
 
 The user approved the visual direction and navigation but reported substantial pose errors and poor character fidelity in the animated v0.2 SVG study. **This animation is not acceptable as an instructional asset.** No more movement expansion until the neutral Instructor A01 design sheet is approved, a single 3D rig is reviewed, and actual technique media are validated by a qualified boxing coach. See [character approval task](https://github.com/rayadinaveen98-ship-it/-martial-arts-academy/issues/2).
@@ -63,6 +67,8 @@ A reproducible smoke-test script and GitHub Actions workflow are committed. Loca
 - [Implemented Stance & Guard motion-study prototype and limitations](docs/11-MOTION-STUDY-V02.md)
 - [Character design system and C0–C4 gates](docs/12-CHARACTER-DESIGN-SYSTEM-V1.md)
 - [Character/motion validation production process](docs/13-CHARACTER-AND-MOTION-PRODUCTION-GATES.md)
+- [C1 base-model experiment](docs/15-C1-GEOMETRY-EXPERIMENT.md)
+- [Laptop Blender handoff](docs/16-BLENDER-LAPTOP-HANDOFF.md)
 
 ## Important status distinction
 Documentation, an HTML academy demo, a rejected schematic-motion test, A01 art-review tools and a C1 technical 3D viewer exist. **No custom A01 mesh, reviewed stance video, native Android implementation, emulator screenshot or APK exists.**
