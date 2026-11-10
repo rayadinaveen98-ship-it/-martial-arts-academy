@@ -28,6 +28,14 @@ A premium, interactive martial arts education companion that makes beginner prog
 - Offline-first design; no server or AI system required.
 - No camera-based technique correction, sparring, submissions or contact drills.
 
+## Interactive prototype (web vertical slice)
+
+[**Open the self-contained v0.1 web prototype source**](prototype/academy_working_prototype.html) · [Prototype functionality, caveats and manual test guide](prototype/README.md)
+
+Implemented: onboarding, three concept lessons, two questions per lesson, progressive unlocking, responsive dark cinematic UI, saved local progress, a demo practice timer with pause/resume/rest and honest completion accounting. This **is not an Android APK**, and generated athlete artwork is explicitly decorative, not coach-approved technique instruction.
+
+A reproducible smoke-test script and GitHub Actions workflow are committed. Local Node simulated-DOM QA passed; full browser screenshot/emulator visual QA has **not** passed, owing to browser restrictions in the testing environment.
+
 ## Working documentation
 - [Project charter](docs/00-PROJECT-CHARTER.md)
 - [Research and references](docs/01-RESEARCH-AND-SOURCES.md)
